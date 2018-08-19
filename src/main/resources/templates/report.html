@@ -1,0 +1,15 @@
+{{!-- The body content of the mail is here --}}
+
+{{#partial "content" }}
+
+    {{> customHtml/titleGrid}}
+
+    {{> customHtml/metadataGrid}}
+
+    {{> customHtml/resultGrid}}
+
+{{/partial}}
+
+{{!-- Rest of the mail format will be loaded via template inheritance as below --}}
+
+{{> defaultHtml/format}}

@@ -1,0 +1,22 @@
+group 'com.aps.thymeleaf'
+version '1.0-SNAPSHOT'
+
+task wrapper(type: Wrapper) {
+  gradleVersion = '2.9'
+  distributionUrl = "https://services.gradle.org/distributions/gradle-$gradleVersion-all.zip"
+}
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group:'com.github.spullara.mustache.java',name: 'compiler', version:'0.9.4'
+    compile group:'com.github.jknack', name:'handlebars', version: '4.1.0'
+
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
