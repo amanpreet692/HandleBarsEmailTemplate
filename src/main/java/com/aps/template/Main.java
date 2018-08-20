@@ -10,6 +10,7 @@ import com.github.jknack.handlebars.context.MapValueResolver;
 import com.github.jknack.handlebars.io.ClassPathTemplateLoader;
 import com.github.jknack.handlebars.io.TemplateLoader;
 
+import java.io.FileWriter;
 import java.util.*;
 
 import static com.aps.template.factory.TemplateLoaderFactory.getInstance;
@@ -37,9 +38,13 @@ public class Main {
         Collection<NamedDataMap> dataMapList =  new ArrayList<>();
         dataMapList.add(new NamedDataMap());
         dataMapList.add(new NamedDataMap());
+        dataMapList.add(new NamedDataMap());
         context.data("dataMapList",dataMapList);
 
-        System.out.println(template.apply(context));
+        FileWriter fileWriter = new FileWriter("./output/result.html");
+        template.apply(context,fileWriter);
+        fileWriter.close();
+        System.out.println("Template written to file");
     }
 
 
