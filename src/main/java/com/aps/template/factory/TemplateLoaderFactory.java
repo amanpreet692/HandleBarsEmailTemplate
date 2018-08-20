@@ -18,7 +18,7 @@ public class TemplateLoaderFactory {
         int listSize = templateLoaders.length;
         switch (listSize){
             case 0 : throw new Exception("1 or more Template Loaders are required");
-            case 1 : templateLoader = templateLoaders[1]; break;
+            case 1 : templateLoader = templateLoaders[0]; break;
             default: templateLoader = new CompositeTemplateLoader(templateLoaders);
         }
         return templateLoader;

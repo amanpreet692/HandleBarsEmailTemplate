@@ -7,22 +7,25 @@
     <![endif]-->
     <div class="mj-column-per-33 outlook-group-fix"
          style="vertical-align:top;display:inline-block;direction:ltr;font-size:13px;text-align:left;width:100%;">
-                    <div style="word-wrap:break-word;padding:7px 8px 7px 8px;cursor:auto;color:#F09A11;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:11px;line-height:22px;text-align:center;">
-                        <table align="center" border="1" cellpadding="1" cellspacing="0" style="width:100%;">
-                            <tbody>
+        <div style="word-wrap:break-word;padding:7px 8px 7px 8px;cursor:auto;color:#F09A11;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:11px;line-height:22px;text-align:center;">
+            <table align="center" cellpadding="2" cellspacing="0" style="border: 2px solid black;width:100%;">
+                <tbody>
+                <tr>
+                    <td>
+                        <table align="center" border="0" cellpadding="0" cellspacing="0" style="width:100%;">
                             <tr>
                                 <td>
-                                    <table border="1" cellpadding="1" cellspacing="0" style="width:100%;">
+                                    <table cellpadding="0" cellspacing="0" style="border:2px solid black;border-collapse:collapse;width:100%;">
                                         <tbody>
                                         <tr bgcolor="#000000">
-                                            <td><strong><span style="font-size:14px;">Identifier</span></strong>
+                                            <td  style="border-right:2px solid white;"><strong><span style="font-size:14px;">Identifier</span></strong>
                                             </td>
                                             <td><strong><span style="font-size:14px;">Diffs</span></strong>
                                             </td>
                                         </tr>
                                         <tr>
                                             <span style="color:#000000;font-size:14px;"><strong>
-                                            <td>
+                                            <td style="border-right:2px solid black;">
                                                 &nbsp;{{id}}
                                             </td>
                                             <td>
@@ -34,47 +37,50 @@
                                     </table>
                                 </td>
                             </tr>
+                        </table>
+                    </td>
+                </tr>
 
-                            {{#each dataMapList}}
+                {{#each dataMapList}}
 
-                            <tr style="border:0;">
+                <tr>
+                    <td>
+                        <table align="center" border="0" cellpadding="0" cellspacing="0" style="width:100%;">
+                            <thead>
+                            <tr bgcolor="#000000">
+                                <th scope="col"><span style="font-size:14px;">{{name}}</span>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
                                 <td>
-                                    <table align="center" border="1" cellpadding="1" cellspacing="0" style="width:100%;">
-                                        <thead>
-                                        <tr bgcolor="#000000">
-                                            <th scope="col"><span style="font-size:14px;">{{name}}</span>
-                                            </th>
-                                        </tr>
-                                        </thead>
+                                    <table align="center" cellpadding="0" cellspacing="0" style="border-collapse: collapse;width:100%;">
                                         <tbody>
+
+                                        {{#each countMap}}
+
                                         <tr>
-                                            <td>
-                                                <table align="center" border="1" cellpadding="0" cellspacing="0" style="width:100%;">
-                                                    <tbody>
-
-                                                    {{#each countMap}}
-
-                                                    <tr>
-                                                        <td>{{@key}}</td>
-                                                        <td>{{this}}</td>
-                                                    </tr>
-
-                                                    {{/each}}
-
-                                                    </tbody>
-                                                </table>
-                                            </td>
+                                            <td style="border: 2px solid black;">{{@key}}</td>
+                                            <td style="border: 2px solid black;">{{this}}</td>
                                         </tr>
+
+                                        {{/each}}
+
                                         </tbody>
                                     </table>
                                 </td>
                             </tr>
-
-                            {{/each}}
-
                             </tbody>
                         </table>
-                    </div>
+                    </td>
+                </tr>
+
+                {{/each}}
+
+                </tbody>
+            </table>
+        </div>
     </div>
     <!--[if mso | IE]>
     </td>
