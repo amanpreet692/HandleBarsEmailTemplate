@@ -1,4 +1,4 @@
-package com.aps.template.data;
+package com.aps.sample.data;
 
 import java.util.HashMap;
 import java.util.Map;
