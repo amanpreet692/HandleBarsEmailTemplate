@@ -1,4 +1,4 @@
-package template.factory;
+package com.aps.template.factory;
 
 import com.github.jknack.handlebars.io.CompositeTemplateLoader;
 import com.github.jknack.handlebars.io.TemplateLoader;

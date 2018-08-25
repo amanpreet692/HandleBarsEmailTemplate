@@ -3,13 +3,13 @@ package com.aps.sample;
 import com.github.jknack.handlebars.Context;
 import com.github.jknack.handlebars.io.TemplateLoader;
 import com.aps.sample.data.NamedDataMap;
-import template.engine.TemplateEngine;
+import com.aps.template.engine.TemplateEngine;
 
 import java.util.ArrayList;
 import java.util.Collection;
 
-import static template.factory.TemplateLoaderFactory.getInstance;
-import static template.factory.TemplateLoaderType.CLASSPATH;
+import static com.aps.template.factory.TemplateLoaderFactory.getInstance;
+import static com.aps.template.factory.TemplateLoaderType.CLASSPATH;
 
 /**
  * Created by APS on 13-08-2018.

@@ -1,4 +1,4 @@
-package com.aps.template;
+package com.aps.template.factory;
 
 import com.github.jknack.handlebars.io.ClassPathTemplateLoader;
 import com.github.jknack.handlebars.io.CompositeTemplateLoader;
@@ -10,13 +10,13 @@ import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
-import template.factory.TemplateLoaderFactory;
-import template.factory.TemplateLoaderType;
+import com.aps.template.factory.TemplateLoaderFactory;
+import com.aps.template.factory.TemplateLoaderType;
 
 import java.util.Arrays;
 
-import static template.factory.TemplateLoaderFactory.getInstance;
-import static template.factory.TemplateLoaderFactory.resolveTemplateLoader;
+import static com.aps.template.factory.TemplateLoaderFactory.getInstance;
+import static com.aps.template.factory.TemplateLoaderFactory.resolveTemplateLoader;
 
 /**
  * Created by APS on 25-08-2018.
@@ -47,12 +47,12 @@ public class TemplateLoaderFactoryTest {
     }
 
     @Test(expected = NullPointerException.class)
-    public void TestGetInstanceException() {
+    public void testGetInstanceException() {
         getInstance(TemplateLoaderType.CLASSPATH,null,null);
     }
 
     @Test
-    public void TestGetInstance() {
+    public void testGetInstance() {
         TemplateLoader loader = getInstance(TemplateLoaderType.CLASSPATH,"/template");
         Assert.assertTrue(loader.getSuffix().equals(TemplateLoader.DEFAULT_SUFFIX));
         Assert.assertTrue(loader instanceof ClassPathTemplateLoader);

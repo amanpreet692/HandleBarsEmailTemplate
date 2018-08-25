@@ -1,4 +1,4 @@
-package template.engine;
+package com.aps.template.engine;
 
 import com.github.jknack.handlebars.Handlebars;
 import com.github.jknack.handlebars.Template;
@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
-import static template.factory.TemplateLoaderFactory.resolveTemplateLoader;
+import static com.aps.template.factory.TemplateLoaderFactory.resolveTemplateLoader;
 import static java.util.Optional.empty;
 import static java.util.Optional.of;
 
