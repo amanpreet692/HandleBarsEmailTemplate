@@ -1,25 +1,12 @@
-{{!-- Start with mso Condition and then create basic table layout --}}
 
-<!--[if mso | IE]>
-<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" align="center" style="width:600px;">
+<table width="640" cellspacing="0" cellpadding="0" border="0" align="center" style="max-width:640px; width:100%;" bgcolor="#FFFFFF">
     <tr>
-        <td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
-<![endif]-->
-<div style="margin:0px auto;max-width:600px;background:#FFFFFF;">
-    <table role="presentation" cellpadding="0" cellspacing="0" style="font-size:0px;width:100%;background:#FFFFFF;"
-           align="center" border="0">
-        <tbody>
-        <tr>
-            <td style="text-align:center;vertical-align:top;direction:ltr;font-size:0px;">
+        <td align="center" valign="top" style="padding:10px;">
+            <table width="600" cellspacing="0" cellpadding="0" border="0" align="center" style="max-width:600px; width:100%;">
+                <tr>
                 {{#block "tableBody"}}
                 {{/block}}
-            </td>
-        </tr>
-        </tbody>
-    </table>
- </div>
-<!--[if mso | IE]>
-    </td>
- </tr>
+                </tr>
+            </table>
+        </td>
 </table>
-<![endif]-->

@@ -62,7 +62,7 @@ public class TemplateEngine {
                 template.apply(context, writer);
                 return "Template written to file";
             } catch (IOException e) {
-                throw new IOException("Not able to write template to file");
+                throw new IOException("Not able to write template to file",e);
             }
         } else {
             return template.apply(context);
