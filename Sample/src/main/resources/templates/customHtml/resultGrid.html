@@ -1,0 +1,58 @@
+{{#partial "tableBody"}}
+<td width="100%" align="center" style="padding:0px 13px;text-align:center;vertical-align:top;direction:ltr;font-size:0px;">
+    <div style="padding:28px 0px 28px 0px; align:center">
+
+        <div class="mj-column-per-33 outlook-group-fix" style="display:inline-block;width:100%;word-wrap:break-word;">
+            <div style="padding:7px 8px 7px 8px;text-align:center;">
+                <table width="190" cellpadding="6" cellspacing="0" align="left" bgcolor="#ffffff" border="0">
+                    <tr>
+                        <td>
+                            <table align="center" border="1" bordercolor="#000000" cellpadding="0" cellspacing="0" width="175"
+                                   style="word-wrap:break-word;cursor:auto;color:#f09a11;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:14px;line-height:25px;text-align:center;">
+                                <tr>
+                                    <th>
+                                        Identifier
+                                    </th>
+                                    <th>
+                                        Diffs
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>&nbsp;{{id}}</strong>
+                                    </td>
+                                    <td>
+                                        <strong>&nbsp;{{diffs}}</strong>
+                                    </td>
+                                </tr>
+
+                                {{#each dataMapList}}
+                                <tr>
+                                    <th colspan="2">
+                                        {{name}}
+                                    </th>
+                                </tr>
+
+                                {{#each countMap}}
+
+                                <tr>
+                                    <td>{{@key}}</td>
+                                    <td>{{this}}</td>
+                                </tr>
+
+                                {{/each}}
+
+                                {{/each}}
+
+                            </table>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</td>
+{{/partial}}
+
+{{> defaultHtml/reactiveTable}}

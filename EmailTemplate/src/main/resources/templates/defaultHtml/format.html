@@ -2,13 +2,37 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 
     <head>
-    {{> defaultHtml/header}}
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>{{this}}</title>
+
+        {{!--
+            <style type="text/css"/>
+            Add embedded Style Sheet template here as below
+        --}}
+        {{>css/customStyle}}
+
     </head>
 
-    <body style="background: #FFFFFF;">
-        <div class="mj-container" style="background-color:#FFFFFF;">
-            {{#block "content"}}
-            {{/block}}
+    <body style="background: #ffffff;">
+        <div class="mj-container" style="background-color:#ffffff;">
+            <div style="background-color:#f2f2f2; max-width: 640px; margin: auto;">
+                <!--[if mso]>
+                <table role="presentation" width="640" cellspacing="0" cellpadding="0" border="0" align="center">
+                    <tr>
+                        <td>
+                <![endif]-->
+                    {{#block "content"}}
+                    {{/block}}
+                <!--[if mso]>
+                </td>
+                </tr>
+                </table>
+                <![endif]-->
+            </div>
         </div>
     </body>
 
